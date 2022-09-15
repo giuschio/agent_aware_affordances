@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='ASCII'?>
+<robot name="zanussi_oven">
+  <link name="world"/>
+  <link name="base"/>
+  <link name="base_center"/>
+  <link name="handle_link_2"/>
+  <link name="handle_link">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+      <mass value="3.0"/>
+      <inertia ixx="0.4333886585" ixy="0.0" ixz="0.0" iyy="0.39146708384" iyz="0.0" izz="0.042168942339999994"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="consolidated_collision_meshes/door_mesh.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="consolidated_collision_meshes/door_mesh.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    </collision>
+  </link>
+  <link name="link_3">
+    <visual>
+      <geometry>
+        <mesh filename="consolidated_collision_meshes/base_mesh_v.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+    </visual>
+    <!-- onshape exports a collection of meshes - before using them in raisim you need to join them with Blender -->
+    <collision>
+      <geometry>
+        <mesh filename="consolidated_collision_meshes/base_mesh.obj" scale="1 1 1"/>
+      </geometry>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    </collision>
+  </link>
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="base"/>
+    <origin xyz="0.0 0.0 0.75" rpy="0.0 0.0 0.0"/>
+    <!--<origin xyz="-0.7325 1.175 1.005" rpy="0.0 0.0 2.525"/>-->
+    <axis xyz="1.0 0.0 0.0"/>
+  </joint>
+  <joint name="articulation_joint" type="revolute">
+    <parent link="link_3"/>
+    <child link="handle_link"/>
+    <origin xyz="-0.594 -0.589 -0.015" rpy="0.0 0.0 0.0"/>
+    <axis xyz="1.0 0.0 0.0"/>
+    <limit effort="1000.0" velocity="1.0" lower="0.0" upper="1.5707963267948966"/>
+    <dynamics damping="20.0" friction="40.0"/>
+  </joint>
+  <joint name="handle_joint" type="fixed">
+    <parent link="handle_link"/>
+    <child link="handle_link_2"/>
+    <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <joint name="joint_base_center" type="fixed">
+    <parent link="base"/>
+    <child link="base_center"/>
+    <origin xyz="0.0 -0.2 0.45" rpy="0. 0. 0."/>
+    <axis xyz="1.0 0.0 0.0"/>
+  </joint>
+  <joint name="joint_3" type="fixed">
+    <parent link="base_center"/>
+    <child link="link_3"/>
+    <origin xyz="0.0 0.0 0.0" rpy="1.570796326794897 -0.0 -1.570796326794897"/>
+    <axis xyz="1.0 0.0 0.0"/>
+  </joint>
+</robot>

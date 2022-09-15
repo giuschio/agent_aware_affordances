@@ -1,0 +1,413 @@
+actionability_utility_k: 5.0
+art_damping: 20.0
+art_friction: 40.0
+camera_mount_actor: panda_link0
+camera_mount_offset:
+- 0
+- 0
+- 0
+- 1
+- 0
+- 0
+- 0
+camera_noise: 0.0
+closed_loop: 6
+controller_params:
+  cost:
+    angular_weight: 10.0
+    angular_weight_opening: 1.0
+    arm_base_frame: panda_link0
+    arm_joint_weight: 20
+    collision_link_0: panda_link1
+    collision_link_1: panda_link7
+    collision_threshold: 0.35
+    collision_weight: 1000
+    contact_weight: 10.0
+    debug_prints: false
+    grasp_orientation_offset:
+    - 0
+    - -0.7071068
+    - 0
+    - 0.7071068
+    grasp_translation_offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    handle_frame: handle_link
+    joint_limit_cost: 1000
+    joint_limit_slope: 1000000
+    linear_weight: 100.0
+    linear_weight_opening: 10.0
+    lower_joint_limits:
+    - -2.0
+    - -2.0
+    - -6.28
+    - -2.8973
+    - -1.7628
+    - -2.8973
+    - -3.0718
+    - -2.8973
+    - -0.0175
+    - -2.8973
+    max_power: 0.0
+    max_reach: 1.0
+    min_dist: 0.4
+    object_tolerance: 0.01
+    object_weight: 1000
+    obstacle_radius: 0.8
+    obstacle_weight: 0
+    obstacle_weight_slope: 0
+    power_weight: 0.0
+    reach_weight: 100
+    reach_weight_slope: 10
+    regularization: 0.0
+    robot_base_orientation_weight: 20
+    robot_base_position_weight: 20
+    tracked_frame: panda_grasp_finger_edge
+    upper_joint_limits:
+    - 2.0
+    - 2.0
+    - 6.28
+    - 2.8973
+    - 1.7628
+    - 2.8973
+    - 0.0698
+    - 2.8973
+    - 3.7525
+    - 2.8973
+  dynamics:
+    articulation_joint: articulation_joint
+    dt: 0.015
+    ignore_object_self_collision: true
+    ignore_panda_self_collision: true
+    initial_state:
+    - -2.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - -0.52
+    - 0.0
+    - -1.785
+    - 0.0
+    - 1.1
+    - 0.69
+    - 0.04
+    - 0.04
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.57
+    - 0.0
+    - 0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    object_description: /home/giulio/Git/robot_manipulation/src/demo_objects/demo_oven/mobility.urdf
+    object_description_raisim: /home/giulio/Git/robot_manipulation/src/demo_objects/demo_oven/mobility.urdf
+    object_handle_joint: handle_joint
+    object_handle_link: handle_link
+    raisim_object_res_path: /home/giulio/Git/robot_manipulation/src/demo_objects/demo_oven
+    raisim_robot_res_path: /home/giulio/Git/robot_manipulation/src/robot_models
+    ref1:
+    - 0.25
+    - 0.42
+    - 0.02
+    - 0
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1
+    ref2:
+    - 0.25
+    - 0.42
+    - 0.02
+    - 0
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1.57
+    - 2
+    robot_description: /home/giulio/Git/robot_manipulation/src/robot_models/rd.urdf
+    robot_description_raisim: /home/giulio/Git/robot_manipulation/src/robot_models/rd_raisim_cylinder.urdf
+  fpath: /home/giulio/Git/robot_manipulation/src/demo_objects/demo_oven/controller_config_full_generated.yaml
+  options:
+    debug_prints: false
+    default_pose:
+    - 0.62
+    - 0.005
+    - 1.43
+    - 0.99
+    - 0.05
+    - -0.1
+    - -0.003
+    gaussian_policy: true
+    object_tolerance: 0.1
+    references_file: ''
+    solver_config_file: /home/giulio/Git/robot_manipulation/src/tools_mppi/rd_controller_solver_config.yaml
+data_folder: _tmp/data
+dynamically_build_urdf: true
+eps_greedy: 0.0
+filter_collision_check: false
+filter_ik_check: false
+final_object_pose: 0.017274992547279048
+ik_check: false
+initial_object_pose: 1.57
+initial_robot_base_pose:
+- -2.0
+- 0.0
+- 0.0
+interaction_orientation_sampling_mode: angle-uniform
+interaction_successful_tolerance: 0.08726646259971647
+interaction_time: 20.0
+job_number: 0
+min_relative_task: 0.3490658503988659
+movement_time: 30.0
+movement_towards_target: 1.552725007452721
+network_checkpoint: ../demo_models/close_agent-aware.pt
+network_cost_representation: success
+network_orientation_encoding: quat
+number_feas_checks: 1
+number_successful_interactions: 1
+object_center_xyz:
+- 0.0
+- 0.0
+- 0.85
+object_center_xyz_bounds:
+- 0
+- 0
+- -0.3
+- 0.3
+- 0.75
+- 0.95
+object_init_state_pdf:
+- 0.25
+- 0.25
+- 0.5
+object_name: demo_objects/demo_oven
+object_scale: 1.0
+object_scale_bounds:
+- 0.45
+- 0.55
+orientation_utility_k: 5.0
+perform_collision_check: false
+perform_ik_check: true
+pose_cost_drop_time: 2.0
+pose_cost_min_percentage_drop: 0.1
+pose_cost_threshold: 1.0
+process_number: 0
+render_resolution: !!python/tuple
+- !!python/tuple
+  - 1080
+  - 720
+robot_initial_angle_bounds:
+- -20
+- 20
+robot_initial_distance_bounds:
+- 1.75
+- 3
+robot_model: robot_models/rd_raisim_cylinder_accurate.urdf
+robot_model_controller: robot_models/rd_raisim_cylinder.urdf
+robust_cost_percentile: 0.5
+sampling_network: full
+sampling_strategy: eps-greedy
+savepath: _tmp/data/job_0
+settle_time: 10.0
+show_gui: true
+simulation_params:
+  cost:
+    angular_weight: 10.0
+    angular_weight_opening: 1.0
+    arm_base_frame: panda_link0
+    arm_joint_weight: 20
+    collision_link_0: panda_link1
+    collision_link_1: panda_link7
+    collision_threshold: 0.35
+    collision_weight: 1000
+    contact_weight: 10.0
+    debug_prints: false
+    grasp_orientation_offset:
+    - 0
+    - -0.7071068
+    - 0
+    - 0.7071068
+    grasp_translation_offset:
+    - 0.0
+    - 0.0
+    - 0.0
+    handle_frame: handle_link
+    joint_limit_cost: 1000
+    joint_limit_slope: 1000000
+    linear_weight: 100.0
+    linear_weight_opening: 10.0
+    lower_joint_limits:
+    - -2.0
+    - -2.0
+    - -6.28
+    - -2.8973
+    - -1.7628
+    - -2.8973
+    - -3.0718
+    - -2.8973
+    - -0.0175
+    - -2.8973
+    max_power: 0.0
+    max_reach: 1.0
+    min_dist: 0.4
+    object_tolerance: 0.01
+    object_weight: 1000
+    obstacle_radius: 0.8
+    obstacle_weight: 0
+    obstacle_weight_slope: 0
+    power_weight: 0.0
+    reach_weight: 100
+    reach_weight_slope: 10
+    regularization: 0.0
+    robot_base_orientation_weight: 20
+    robot_base_position_weight: 20
+    tracked_frame: panda_grasp_finger_edge
+    upper_joint_limits:
+    - 2.0
+    - 2.0
+    - 6.28
+    - 2.8973
+    - 1.7628
+    - 2.8973
+    - 0.0698
+    - 2.8973
+    - 3.7525
+    - 2.8973
+  dynamics:
+    articulation_joint: articulation_joint
+    dt: 0.0015
+    ignore_object_self_collision: true
+    ignore_panda_self_collision: false
+    initial_state:
+    - -2.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - -0.52
+    - 0.0
+    - -1.785
+    - 0.0
+    - 1.1
+    - 0.69
+    - 0.04
+    - 0.04
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.57
+    - 0.0
+    - 0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    object_description: /home/giulio/Git/robot_manipulation/src/demo_objects/demo_oven/mobility.urdf
+    object_description_raisim: /home/giulio/Git/robot_manipulation/src/demo_objects/demo_oven/mobility.urdf
+    object_handle_joint: handle_joint
+    object_handle_link: handle_link
+    raisim_object_res_path: /home/giulio/Git/robot_manipulation/src/demo_objects/demo_oven
+    raisim_robot_res_path: /home/giulio/Git/robot_manipulation/src/robot_models
+    ref1:
+    - 0.25
+    - 0.42
+    - 0.02
+    - 0
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1
+    ref2:
+    - 0.25
+    - 0.42
+    - 0.02
+    - 0
+    - 1
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1.57
+    - 2
+    robot_description: /home/giulio/Git/robot_manipulation/src/robot_models/rd.urdf
+    robot_description_raisim: /home/giulio/Git/robot_manipulation/src/robot_models/rd_raisim_cylinder_accurate.urdf
+  fpath: /home/giulio/Git/robot_manipulation/src/demo_objects/demo_oven/simulation_config_full_generated.yaml
+  options:
+    debug_prints: false
+    default_pose:
+    - 0.62
+    - 0.005
+    - 1.43
+    - 0.99
+    - 0.05
+    - -0.1
+    - -0.003
+    gaussian_policy: true
+    object_tolerance: 0.1
+    references_file: ''
+    solver_config_file: /home/giulio/Git/robot_manipulation/src/tools_mppi/rd_simulation_solver_config.yaml
+simulation_result:
+- started
+- pinocchio reachable
+- reached reference
+- interaction successful
+target_object_pose: 0.0
+task: null
+task_completion_tolerance: 0.017453292519943295
+task_weights:
+  close: 0.25
+  close-ninety: 0.25
+  open: 0.25
+  open-zero: 0.25
+testing_max_pose_proposals: 100
+total_number_of_interactions: 1
+total_time: 26.194500000000936
